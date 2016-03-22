@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-# describe Creact::FileOperations do
+describe CubaReact::FileOperations do
 #
 #   after :each do
 #     Creact::FileOperations.delete_dirs
@@ -169,4 +169,4 @@ require 'spec_helper'
 #     text = File.open("js/jquery.js", "r")  {|f| f.readline}
 #     expect(text).to eq 'Test'
 #   end
-# end
+end
