@@ -1,4 +1,4 @@
-# Cuba::React
+# Cuba-React
 
 Easily and seamlessly integrate react with your Cuba project.
 
