@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["github@david-bush.co.uk"]
 
   spec.summary       = %q{Integrates React with Cuba}
-  spec.description   = %q{Integrates React with Cuba}
+  spec.description   = %q{Quickly integrate React with your Cuba project}
   spec.homepage      = "https://github.com/disavowd/cuba-react"
   spec.license       = "MIT"
 
