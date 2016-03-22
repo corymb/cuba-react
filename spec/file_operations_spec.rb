@@ -94,14 +94,14 @@ describe CubaReact::FileOperations do
     expect(File.exists? 'js/react.rb').to be true
   end
 
-#   it 'raises exception if layout.mote already exists' do
-#     expect(File.exists? 'views/layout.mote').to be false
-#     Dir.mkdir 'views'
-#     File.open('views/layout.mote', 'w') { |file| file.write("Test") }
-#     expect(File.exists? 'views/layout.mote').to be true
-#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
-#   end
-#
+  it 'raises exception if layout.mote already exists' do
+    expect(File.exists? 'views/layout.mote').to be false
+    Dir.mkdir 'views'
+    File.open('views/layout.mote', 'w') { |file| file.write("Test") }
+    expect(File.exists? 'views/layout.mote').to be true
+    expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
+  end
+
 #   it 'raises exception if home.mote already exists' do
 #     expect(File.exists? 'views/home.mote').to be false
 #     Dir.mkdir 'views'
