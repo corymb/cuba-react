@@ -48,14 +48,14 @@ describe CubaReact::FileOperations do
     CubaReact::FileOperations.run_generator
     expect(File.exists? 'views/home.mote').to be true
   end
-#
-#   it 'creates layout.mote' do
-#     expect(File.exists? 'views/layout.mote').to be false
-#     CubaReact::FileOperations.create_dirs
-#     CubaReact::FileOperations.create_views
-#     expect(File.exists? 'views/layout.mote').to be true
-#   end
-#
+
+  it 'creates layout.mote' do
+    expect(File.exists? 'views/layout.mote').to be false
+    CubaReact::FileOperations.create_dirs
+    CubaReact::FileOperations.create_views
+    expect(File.exists? 'views/layout.mote').to be true
+  end
+
 #   it 'creates layout.mote in a pre-existing views directory' do
 #     expect(Dir.exists? 'views').to be false
 #     Dir.mkdir 'views'
