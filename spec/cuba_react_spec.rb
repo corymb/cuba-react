@@ -12,7 +12,7 @@ describe CubaReact do
   #   Creact::FileOperations.delete_dirs
   # end
 
-  it 'returns something when loader is called' do
+  it 'returns non-empty string when loader is called' do
     expect(cuba_react_wrapper.new.loader).not_to eq ''
   end
 
