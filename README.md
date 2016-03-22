@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-FRom the shell, run:
+From the shell, run:
   
     cuba-react generate
 
