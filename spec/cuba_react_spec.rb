@@ -39,4 +39,9 @@ describe CubaReact do
   it 'loader marks entry point loaded' do
     expect(cuba_react_wrapper.new.loader).to include 'Opal.load("react");'
   end
+
+  it 'runs guard command' do
+    result = `cuba-react generate`
+    # expect(result).to eq 1
+  end
 end
