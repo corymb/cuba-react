@@ -36,7 +36,7 @@ describe CubaReact do
     expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("sources/react.self");'
   end
 
-  # it 'loader marks entry point loaded' do
-  #   expect(cuba_react_wrapper.new.loader).to include 'Opal.load("react");'
-  # end
+  it 'loader marks entry point loaded' do
+    expect(cuba_react_wrapper.new.loader).to include 'Opal.load("react");'
+  end
 end
