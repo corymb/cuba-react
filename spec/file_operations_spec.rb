@@ -34,13 +34,13 @@ describe CubaReact::FileOperations do
     expect(Dir.exists? 'views').to be true
   end
 
-#   it 'creates home.mote' do
-#     expect(File.exists? 'views/home.mote').to be false
-#     CubaReact::FileOperations.create_dirs
-#     CubaReact::FileOperations.create_views
-#     expect(File.exists? 'views/home.mote').to be true
-#   end
-#
+  it 'creates home.mote' do
+    expect(File.exists? 'views/home.mote').to be false
+    CubaReact::FileOperations.create_dirs
+    CubaReact::FileOperations.create_views
+    expect(File.exists? 'views/home.mote').to be true
+  end
+
 #   it 'creates home.mote in a pre-existing views directory' do
 #     expect(Dir.exists? 'views').to be false
 #     Dir.mkdir 'views'
