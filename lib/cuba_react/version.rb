@@ -1,5 +1,3 @@
-module Cuba
-  module React
+module CubaReact
     VERSION = "0.1.0"
-  end
 end
