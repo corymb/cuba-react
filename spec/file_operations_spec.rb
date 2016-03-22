@@ -118,14 +118,14 @@ describe CubaReact::FileOperations do
     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
   end
 
-#   it 'raises exception if react.rb already exists' do
-#     expect(File.exists? 'js/react.rb').to be false
-#     Dir.mkdir 'js'
-#     File.open('js/react.rb', 'w') { |file| file.write("Test") }
-#     expect(File.exists? 'js/react.rb').to be true
-#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
-#   end
-#
+  it 'raises exception if react.rb already exists' do
+    expect(File.exists? 'js/react.rb').to be false
+    Dir.mkdir 'js'
+    File.open('js/react.rb', 'w') { |file| file.write("Test") }
+    expect(File.exists? 'js/react.rb').to be true
+    expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
+  end
+
 #   it 'does not overwrite existing layout.mote' do
 #     expect(File.exists? 'views/layout.mote').to be false
 #     Dir.mkdir 'views'
