@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'cuba-react'
+require 'cuba_react'
 
 CubaReact::Generate.start( ARGV )
