@@ -110,14 +110,14 @@ describe CubaReact::FileOperations do
     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
   end
 
-#   it 'raises exception if jquery.js already exists' do
-#     expect(File.exists? 'views/jquery.js').to be false
-#     Dir.mkdir 'js'
-#     File.open('js/jquery.js', 'w') { |file| file.write("Test") }
-#     expect(File.exists? 'js/jquery.js').to be true
-#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
-#   end
-#
+  it 'raises exception if jquery.js already exists' do
+    expect(File.exists? 'views/jquery.js').to be false
+    Dir.mkdir 'js'
+    File.open('js/jquery.js', 'w') { |file| file.write("Test") }
+    expect(File.exists? 'js/jquery.js').to be true
+    expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
+  end
+
 #   it 'raises exception if react.rb already exists' do
 #     expect(File.exists? 'js/react.rb').to be false
 #     Dir.mkdir 'js'
