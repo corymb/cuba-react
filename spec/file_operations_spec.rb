@@ -148,17 +148,17 @@ describe CubaReact::FileOperations do
     expect(text).to eq 'Test'
   end
 
-#   it 'does not overwrite existing react.rb' do
-#     expect(File.exists? 'js/react.rb').to be false
-#     Dir.mkdir 'js'
-#     File.open('js/react.rb', 'w') { |file| file.write("Test") }
-#     expect(File.exists? 'js/react.rb').to be true
-#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
-#     expect(File.exists? 'js/react.rb').to be true
-#     text = File.open("js/react.rb", "r")  {|f| f.readline}
-#     expect(text).to eq 'Test'
-#   end
-#
+  it 'does not overwrite existing react.rb' do
+    expect(File.exists? 'js/react.rb').to be false
+    Dir.mkdir 'js'
+    File.open('js/react.rb', 'w') { |file| file.write("Test") }
+    expect(File.exists? 'js/react.rb').to be true
+    expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
+    expect(File.exists? 'js/react.rb').to be true
+    text = File.open("js/react.rb", "r")  {|f| f.readline}
+    expect(text).to eq 'Test'
+  end
+
 #   it 'does not overwrite existing jquery.js' do
 #     expect(File.exists? 'js/jquery.js').to be false
 #     Dir.mkdir 'js'
