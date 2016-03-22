@@ -31,6 +31,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 
-  spec.add_dependency "opal", "~> 0.5.0"
-  spec.add_dependency "opal-jquery", "~> 0.1.2"
+  spec.add_dependency "opal", "~> 0.9.2"
+  spec.add_dependency "opal-jquery", "~> 0.4.1"
 end
