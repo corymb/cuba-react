@@ -2,7 +2,7 @@
 require 'cuba_react'
 
 describe CubaReact do
-  # let(:creact_wrapper) { Class.new { include Creact } }
+  let(:cuba_react_wrapper) { Class.new { include CubaReact } }
   #
   # before :all do
   #   Creact::FileOperations.run_generator
@@ -11,11 +11,15 @@ describe CubaReact do
   # after :all do
   #   Creact::FileOperations.delete_dirs
   # end
-  #
+
+  it 'returns something when loader is called' do
+    expect(cuba_react_wrapper.new.loader).not_to eq ''
+  end
+
   it 'has a version number' do
     expect(CubaReact::VERSION).not_to be nil
   end
-  #
+
   # it 'loader marks opal loaded' do
   #   expect(creact_wrapper.new.loader).to include 'mark_as_loaded("opal");'
   # end
