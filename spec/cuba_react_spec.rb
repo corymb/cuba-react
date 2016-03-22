@@ -3,14 +3,14 @@ require 'cuba_react'
 
 describe CubaReact do
   let(:cuba_react_wrapper) { Class.new { include CubaReact } }
-  #
-  # before :all do
-  #   Creact::FileOperations.run_generator
-  # end
-  #
-  # after :all do
-  #   Creact::FileOperations.delete_dirs
-  # end
+
+  before :all do
+    CubaReact::FileOperations.run_generator
+  end
+
+  after :all do
+    CubaReact::FileOperations.delete_dirs
+  end
 
   it 'returns non-empty string when loader is called' do
     expect(cuba_react_wrapper.new.loader).not_to eq ''
