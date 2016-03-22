@@ -15,13 +15,8 @@ module CubaReact
       │   └── layout.mote\n
 
       This will integrate React into your project.\n
-
     GENERATE
-    # option :upcase
     def generate( template=nil )
-      # greeting = "Hello, #{template}"
-      # greeting.upcase! if options[:upcase]
-      # puts greeting
       CubaReact::FileOperations.run_generator
     end
   end
