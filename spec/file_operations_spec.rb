@@ -86,14 +86,14 @@ describe CubaReact::FileOperations do
     expect(File.exists? 'js/react.rb').to be true
   end
 
-#   it 'creates react.rb in a pre-existing js directory' do
-#     expect(Dir.exists? 'js').to be false
-#     Dir.mkdir 'js'
-#     expect(Dir.exists? 'js').to be true
-#     CubaReact::FileOperations.run_generator
-#     expect(File.exists? 'js/react.rb').to be true
-#   end
-#
+  it 'creates react.rb in a pre-existing js directory' do
+    expect(Dir.exists? 'js').to be false
+    Dir.mkdir 'js'
+    expect(Dir.exists? 'js').to be true
+    CubaReact::FileOperations.run_generator
+    expect(File.exists? 'js/react.rb').to be true
+  end
+
 #   it 'raises exception if layout.mote already exists' do
 #     expect(File.exists? 'views/layout.mote').to be false
 #     Dir.mkdir 'views'
