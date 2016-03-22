@@ -24,10 +24,10 @@ describe CubaReact do
     expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("opal");'
   end
 
-  # it 'loader marks runtime loaded' do
-  #   expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("corelib/runtime.self");'
-  # end
-  #
+  it 'loader marks runtime loaded' do
+    expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("corelib/runtime.self");'
+  end
+
   # it 'loader marks jquery loaded' do
   #   expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("jquery.self");'
   # end
