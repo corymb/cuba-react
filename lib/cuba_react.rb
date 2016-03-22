@@ -1,5 +1,6 @@
-require 'opal'
+require "opal"
 require "cuba_react/version"
+require "cuba_react/cli"
 
 module CubaReact
   def loader
