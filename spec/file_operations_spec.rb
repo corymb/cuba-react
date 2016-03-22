@@ -18,14 +18,14 @@ describe CubaReact::FileOperations do
     expect(Dir.exists? 'views').to be true
   end
 
-#   it 'handles a pre-existing js directory' do
-#     expect(Dir.exists? 'js').to be false
-#     Dir.mkdir 'js'
-#     expect(Dir.exists? 'js').to be true
-#     CubaReact::FileOperations.create_dirs
-#     expect(Dir.exists? 'js').to be true
-#   end
-#
+  it 'handles a pre-existing js directory' do
+    expect(Dir.exists? 'js').to be false
+    Dir.mkdir 'js'
+    expect(Dir.exists? 'js').to be true
+    CubaReact::FileOperations.create_dirs
+    expect(Dir.exists? 'js').to be true
+  end
+
 #   it 'handles a pre-existing views directory' do
 #     expect(Dir.exists? 'views').to be false
 #     Dir.mkdir 'views'
