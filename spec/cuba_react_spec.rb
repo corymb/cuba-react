@@ -25,18 +25,18 @@ describe CubaReact do
   end
 
   # it 'loader marks runtime loaded' do
-  #   expect(creact_wrapper.new.loader).to include 'mark_as_loaded("corelib/runtime.self");'
+  #   expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("corelib/runtime.self");'
   # end
   #
   # it 'loader marks jquery loaded' do
-  #   expect(creact_wrapper.new.loader).to include 'mark_as_loaded("jquery.self");'
+  #   expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("jquery.self");'
   # end
   #
   # it 'loader marks react loaded' do
-  #   expect(creact_wrapper.new.loader).to include 'mark_as_loaded("sources/react.self");'
+  #   expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("sources/react.self");'
   # end
   #
   # it 'loader marks entry point loaded' do
-  #   expect(creact_wrapper.new.loader).to include 'Opal.load("react");'
+  #   expect(cuba_react_wrapper.new.loader).to include 'Opal.load("react");'
   # end
 end
