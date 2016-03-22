@@ -1,5 +1,4 @@
-# require 'spec_helper'
-require 'cuba_react'
+require 'spec_helper'
 
 describe CubaReact do
   let(:cuba_react_wrapper) { Class.new { include CubaReact } }
@@ -40,8 +39,8 @@ describe CubaReact do
     expect(cuba_react_wrapper.new.loader).to include 'Opal.load("react");'
   end
 
-  # it 'runs guard command' do
-  #   result = `cuba-react generate`
-  #   # expect(result).to eq 1
-  # end
+  it 'runs guard command' do
+    CubaReact::FileOperations.delete_dirs
+    expect(`cuba-react generate`).to start_with('Running generator')
+  end
 end
