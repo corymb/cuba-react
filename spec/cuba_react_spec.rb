@@ -1,4 +1,5 @@
-require 'spec_helper'
+# require 'spec_helper'
+require 'cuba_react'
 
 describe CubaReact do
   # let(:creact_wrapper) { Class.new { include Creact } }
@@ -11,9 +12,9 @@ describe CubaReact do
   #   Creact::FileOperations.delete_dirs
   # end
   #
-  it 'has a version number' do
-    expect(CubaReact::VERSION).not_to be nil
-  end
+  # it 'has a version number' do
+  #   expect(CubaReact::VERSION).not_to be nil
+  # end
   #
   # it 'loader marks opal loaded' do
   #   expect(creact_wrapper.new.loader).to include 'mark_as_loaded("opal");'
