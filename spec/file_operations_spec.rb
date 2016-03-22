@@ -126,17 +126,17 @@ describe CubaReact::FileOperations do
     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
   end
 
-#   it 'does not overwrite existing layout.mote' do
-#     expect(File.exists? 'views/layout.mote').to be false
-#     Dir.mkdir 'views'
-#     File.open('views/layout.mote', 'w') { |file| file.write("Test") }
-#     expect(File.exists? 'views/layout.mote').to be true
-#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
-#     expect(File.exists? 'views/layout.mote').to be true
-#     text = File.open("views/layout.mote", "r")  {|f| f.readline}
-#     expect(text).to eq 'Test'
-#   end
-#
+  it 'does not overwrite existing layout.mote' do
+    expect(File.exists? 'views/layout.mote').to be false
+    Dir.mkdir 'views'
+    File.open('views/layout.mote', 'w') { |file| file.write("Test") }
+    expect(File.exists? 'views/layout.mote').to be true
+    expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
+    expect(File.exists? 'views/layout.mote').to be true
+    text = File.open("views/layout.mote", "r")  {|f| f.readline}
+    expect(text).to eq 'Test'
+  end
+
 #   it 'does not overwrite existing home.mote' do
 #     expect(File.exists? 'views/home.mote').to be false
 #     Dir.mkdir 'views'
