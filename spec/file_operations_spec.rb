@@ -71,13 +71,13 @@ describe CubaReact::FileOperations do
     expect(File.exists? 'js/jquery.js').to be true
   end
 
-#   it 'creates jquery.js in a pre-existing js directory' do
-#     expect(Dir.exists? 'js').to be false
-#     Dir.mkdir 'js'
-#     expect(Dir.exists? 'js').to be true
-#     CubaReact::FileOperations.run_generator
-#     expect(File.exists? 'js/jquery.js').to be true
-#   end
+  it 'creates jquery.js in a pre-existing js directory' do
+    expect(Dir.exists? 'js').to be false
+    Dir.mkdir 'js'
+    expect(Dir.exists? 'js').to be true
+    CubaReact::FileOperations.run_generator
+    expect(File.exists? 'js/jquery.js').to be true
+  end
 #
 #   it 'creates react.rb' do
 #     expect(File.exists? 'js/react.rb').to be false
