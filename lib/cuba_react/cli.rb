@@ -16,7 +16,7 @@ module CubaReact
 
       This will integrate React into your project.\n
     GENERATE
-    def generate( template=nil )
+    def generate
       CubaReact::FileOperations.run_generator
     end
   end
