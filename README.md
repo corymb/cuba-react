@@ -1,3 +1,7 @@
+[![Gem Version](https://img.shields.io/gem/v/cuba-react.svg)](https://rubygems.org/gems/cuba-react)
+[![Build Status](https://travis-ci.org/disavowd/cuba-react.svg?branch=master)](https://travis-ci.org/disavowd/cuba-react)
+[![Dependency Status](https://gemnasium.com/disavowd/cuba-react.svg)](https://gemnasium.com/disavowd/cuba-react)
+
 # Cuba-React
 
 Easily and seamlessly integrate react with your Cuba project.
