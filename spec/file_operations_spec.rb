@@ -3,18 +3,18 @@ require 'spec_helper'
 describe CubaReact::FileOperations do
 
   after :each do
-    Creact::FileOperations.delete_dirs
+    CubaReact::FileOperations.delete_dirs
   end
 
-#   it 'creates js directory' do
-#     expect(Dir.exists? 'js').to be false
-#     Creact::FileOperations.create_dirs
-#     expect(Dir.exists? 'js').to be true
-#   end
-#
+  it 'creates js directory' do
+    expect(Dir.exists? 'js').to be false
+    CubaReact::FileOperations.create_dirs
+    expect(Dir.exists? 'js').to be true
+  end
+
 #   it 'creates views directory' do
 #     expect(Dir.exists? 'views').to be false
-#     Creact::FileOperations.create_dirs
+#     CubaReact::FileOperations.create_dirs
 #     expect(Dir.exists? 'views').to be true
 #   end
 #
@@ -22,7 +22,7 @@ describe CubaReact::FileOperations do
 #     expect(Dir.exists? 'js').to be false
 #     Dir.mkdir 'js'
 #     expect(Dir.exists? 'js').to be true
-#     Creact::FileOperations.create_dirs
+#     CubaReact::FileOperations.create_dirs
 #     expect(Dir.exists? 'js').to be true
 #   end
 #
@@ -30,14 +30,14 @@ describe CubaReact::FileOperations do
 #     expect(Dir.exists? 'views').to be false
 #     Dir.mkdir 'views'
 #     expect(Dir.exists? 'views').to be true
-#     Creact::FileOperations.create_dirs
+#     CubaReact::FileOperations.create_dirs
 #     expect(Dir.exists? 'views').to be true
 #   end
 #
 #   it 'creates home.mote' do
 #     expect(File.exists? 'views/home.mote').to be false
-#     Creact::FileOperations.create_dirs
-#     Creact::FileOperations.create_views
+#     CubaReact::FileOperations.create_dirs
+#     CubaReact::FileOperations.create_views
 #     expect(File.exists? 'views/home.mote').to be true
 #   end
 #
@@ -45,14 +45,14 @@ describe CubaReact::FileOperations do
 #     expect(Dir.exists? 'views').to be false
 #     Dir.mkdir 'views'
 #     expect(Dir.exists? 'views').to be true
-#     Creact::FileOperations.run_generator
+#     CubaReact::FileOperations.run_generator
 #     expect(File.exists? 'views/home.mote').to be true
 #   end
 #
 #   it 'creates layout.mote' do
 #     expect(File.exists? 'views/layout.mote').to be false
-#     Creact::FileOperations.create_dirs
-#     Creact::FileOperations.create_views
+#     CubaReact::FileOperations.create_dirs
+#     CubaReact::FileOperations.create_views
 #     expect(File.exists? 'views/layout.mote').to be true
 #   end
 #
@@ -60,14 +60,14 @@ describe CubaReact::FileOperations do
 #     expect(Dir.exists? 'views').to be false
 #     Dir.mkdir 'views'
 #     expect(Dir.exists? 'views').to be true
-#     Creact::FileOperations.run_generator
+#     CubaReact::FileOperations.run_generator
 #     expect(File.exists? 'views/layout.mote').to be true
 #   end
 #
 #   it 'creates jquery.js' do
 #     expect(File.exists? 'js/jquery.js').to be false
-#     Creact::FileOperations.create_dirs
-#     Creact::FileOperations.create_js
+#     CubaReact::FileOperations.create_dirs
+#     CubaReact::FileOperations.create_js
 #     expect(File.exists? 'js/jquery.js').to be true
 #   end
 #
@@ -75,14 +75,14 @@ describe CubaReact::FileOperations do
 #     expect(Dir.exists? 'js').to be false
 #     Dir.mkdir 'js'
 #     expect(Dir.exists? 'js').to be true
-#     Creact::FileOperations.run_generator
+#     CubaReact::FileOperations.run_generator
 #     expect(File.exists? 'js/jquery.js').to be true
 #   end
 #
 #   it 'creates react.rb' do
 #     expect(File.exists? 'js/react.rb').to be false
-#     Creact::FileOperations.create_dirs
-#     Creact::FileOperations.create_js
+#     CubaReact::FileOperations.create_dirs
+#     CubaReact::FileOperations.create_js
 #     expect(File.exists? 'js/react.rb').to be true
 #   end
 #
@@ -90,7 +90,7 @@ describe CubaReact::FileOperations do
 #     expect(Dir.exists? 'js').to be false
 #     Dir.mkdir 'js'
 #     expect(Dir.exists? 'js').to be true
-#     Creact::FileOperations.run_generator
+#     CubaReact::FileOperations.run_generator
 #     expect(File.exists? 'js/react.rb').to be true
 #   end
 #
@@ -99,7 +99,7 @@ describe CubaReact::FileOperations do
 #     Dir.mkdir 'views'
 #     File.open('views/layout.mote', 'w') { |file| file.write("Test") }
 #     expect(File.exists? 'views/layout.mote').to be true
-#     expect{ Creact::FileOperations.run_generator }.to raise_error(IOError)
+#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
 #   end
 #
 #   it 'raises exception if home.mote already exists' do
@@ -107,7 +107,7 @@ describe CubaReact::FileOperations do
 #     Dir.mkdir 'views'
 #     File.open('views/home.mote', 'w') { |file| file.write("Test") }
 #     expect(File.exists? 'views/home.mote').to be true
-#     expect{ Creact::FileOperations.run_generator }.to raise_error(IOError)
+#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
 #   end
 #
 #   it 'raises exception if jquery.js already exists' do
@@ -115,7 +115,7 @@ describe CubaReact::FileOperations do
 #     Dir.mkdir 'js'
 #     File.open('js/jquery.js', 'w') { |file| file.write("Test") }
 #     expect(File.exists? 'js/jquery.js').to be true
-#     expect{ Creact::FileOperations.run_generator }.to raise_error(IOError)
+#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
 #   end
 #
 #   it 'raises exception if react.rb already exists' do
@@ -123,7 +123,7 @@ describe CubaReact::FileOperations do
 #     Dir.mkdir 'js'
 #     File.open('js/react.rb', 'w') { |file| file.write("Test") }
 #     expect(File.exists? 'js/react.rb').to be true
-#     expect{ Creact::FileOperations.run_generator }.to raise_error(IOError)
+#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
 #   end
 #
 #   it 'does not overwrite existing layout.mote' do
@@ -131,7 +131,7 @@ describe CubaReact::FileOperations do
 #     Dir.mkdir 'views'
 #     File.open('views/layout.mote', 'w') { |file| file.write("Test") }
 #     expect(File.exists? 'views/layout.mote').to be true
-#     expect{ Creact::FileOperations.run_generator }.to raise_error(IOError)
+#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
 #     expect(File.exists? 'views/layout.mote').to be true
 #     text = File.open("views/layout.mote", "r")  {|f| f.readline}
 #     expect(text).to eq 'Test'
@@ -142,7 +142,7 @@ describe CubaReact::FileOperations do
 #     Dir.mkdir 'views'
 #     File.open('views/home.mote', 'w') { |file| file.write("Test") }
 #     expect(File.exists? 'views/home.mote').to be true
-#     expect{ Creact::FileOperations.run_generator }.to raise_error(IOError)
+#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
 #     expect(File.exists? 'views/home.mote').to be true
 #     text = File.open("views/home.mote", "r")  {|f| f.readline}
 #     expect(text).to eq 'Test'
@@ -153,7 +153,7 @@ describe CubaReact::FileOperations do
 #     Dir.mkdir 'js'
 #     File.open('js/react.rb', 'w') { |file| file.write("Test") }
 #     expect(File.exists? 'js/react.rb').to be true
-#     expect{ Creact::FileOperations.run_generator }.to raise_error(IOError)
+#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
 #     expect(File.exists? 'js/react.rb').to be true
 #     text = File.open("js/react.rb", "r")  {|f| f.readline}
 #     expect(text).to eq 'Test'
@@ -164,7 +164,7 @@ describe CubaReact::FileOperations do
 #     Dir.mkdir 'js'
 #     File.open('js/jquery.js', 'w') { |file| file.write("Test") }
 #     expect(File.exists? 'js/jquery.js').to be true
-#     expect{ Creact::FileOperations.run_generator }.to raise_error(IOError)
+#     expect{ CubaReact::FileOperations.run_generator }.to raise_error(IOError)
 #     expect(File.exists? 'js/jquery.js').to be true
 #     text = File.open("js/jquery.js", "r")  {|f| f.readline}
 #     expect(text).to eq 'Test'
