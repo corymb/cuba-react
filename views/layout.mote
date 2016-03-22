@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="/assets/react.js"></script>
+    <script>{{ app.loader }}</script>
+  </head>
+  <body>
+    <div id="layout">
+      {{ content }}
+    </div>
+  </body>
+</html>
