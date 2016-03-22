@@ -20,10 +20,10 @@ describe CubaReact do
     expect(CubaReact::VERSION).not_to be nil
   end
 
-  # it 'loader marks opal loaded' do
-  #   expect(creact_wrapper.new.loader).to include 'mark_as_loaded("opal");'
-  # end
-  #
+  it 'loader marks opal loaded' do
+    expect(cuba_react_wrapper.new.loader).to include 'mark_as_loaded("opal");'
+  end
+
   # it 'loader marks runtime loaded' do
   #   expect(creact_wrapper.new.loader).to include 'mark_as_loaded("corelib/runtime.self");'
   # end
