@@ -35,10 +35,28 @@ This will generate the following files in your project:
     js/jquery.js
     js/react.rb
 
-Route a url to 'home.mote':
+Include Cuba-react in your Cuba instance: 
+
+    # app.rb:
+    require 'cuba_react'
+    Cuba.plugin CubaReact
+
+...and route a url to 'home.mote':
 
     # app.rb:
     res.write view("home")
+
+Finally, add the entry point and routing for sprockets to your config.ru:
+
+    # config.ru:
+    opal = Opal::Server.new {|s|
+      s.append_path 'js'
+      s.main = 'app'
+    }
+
+    map '/assets' do
+      run opal.sprockets
+    end
 
 Congratulations - you just integrated React into your Cuba project!
 
