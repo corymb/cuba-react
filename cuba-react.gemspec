@@ -31,8 +31,14 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 11.1"
   spec.add_development_dependency "rspec", "~> 3.0"
 
-  spec.add_dependency "opal", "~> 0.8.0"
-  spec.add_dependency "opal-jquery", "~> 0.4.1"
-  spec.add_dependency "reactive-ruby", "~> 0.7.40"
-  spec.add_dependency "thor", "~> 0.19.1"
+  # spec.add_dependency "opal", "~> 0.8.0"
+  # spec.add_dependency "opal-jquery", "~> 0.4.1"
+  # spec.add_dependency "reactive-ruby", "~> 0.7.40"
+  # spec.add_dependency "thor", "~> 0.19.1"
+  spec.add_dependency 'opal'
+  spec.add_dependency 'jquery'
+  spec.add_dependency 'opal-jquery'
+  spec.add_dependency 'nokogiri'
+  spec.add_dependency 'reactive-ruby'
+  spec.add_dependency 'thor'
 end

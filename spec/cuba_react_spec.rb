@@ -3,11 +3,11 @@ require 'spec_helper'
 describe CubaReact do
   let(:cuba_react_wrapper) { Class.new { include CubaReact } }
 
-  before :each do
+  before :all do
     CubaReact::FileOperations.run_generator
   end
 
-  after :each do
+  after :all do
     CubaReact::FileOperations.delete_dirs
   end
 
