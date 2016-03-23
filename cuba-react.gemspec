@@ -13,6 +13,8 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Quickly integrate React with your Cuba project}
   spec.homepage      = "https://github.com/disavowd/cuba-react"
   spec.license       = "MIT"
+  spec.post_install_message = "Thank you for installing! Run `cuba-react generate` to get started."
+  spec.required_ruby_version = '>= 2.0.0'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
