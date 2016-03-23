@@ -1,7 +1,8 @@
 require "opal"
+require "opal-jquery"
+require "reactive-ruby"
 require "cuba_react/cli"
 require "cuba_react/file_operations"
-require "cuba_react/version"
 
 module CubaReact
   def loader
